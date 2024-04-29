@@ -1,7 +1,8 @@
 {
   "name": "parcel-clean",
   "version": "2.0.0",
-  "homepage": "https://github.com/Cristal1989/portfolio",
+  "description": "",
+  "homepage": "https://github.com/Cristal1989/portfolio/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /portfolio/"
@@ -18,16 +19,12 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
-    "aos": "^2.3.4",
+    "browserslist": "^4.23.0",
     "modern-normalize": "^2.0.0",
     "normalize.css": "^8.0.1",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "dependencies": {
-    "animate.css": "^4.1.1"
-  },
-  "description": ""
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
