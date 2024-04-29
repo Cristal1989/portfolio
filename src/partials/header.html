@@ -1,0 +1,207 @@
+<header class="header" id="header">
+  <section class="container header__container">
+    <div class="header__nav">
+      <div class="nav__logo">
+        <a class="logo__link" href="#"> D. R. </a>
+      </div>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__item--link" href="#">HOME</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__item--link" href="#work">PORTFOLIO</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__item--link" href="#blog">BLOG</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__item--link" href="#contact">CONTACT</a>
+      </li>
+    </ul>
+
+    <button type="button" class="nav__button" data-modal-open>
+      <a class="fancy" href="#">
+        <span class="top-key"></span>
+        <span class="text-button">Feedback</span>
+        <span class="bottom-key-1"></span>
+      </a>
+    </button>
+
+    <button
+      class="menu__btn js-open-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="menu__btn--icon" width="40" height="40">
+        <use href="./images/svg/icons.svg#menu-btn"></use>
+      </svg>
+    </button>
+
+    <!-- ============== mobile menu ================== -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu__btn menu-toggle js-close-menu">
+        <svg class="menu__btn--icon" width="40" height="40">
+          <use href="./images/svg/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile__nav focus-in-expand">
+        <li>
+          <a href="#header" class="link">home</a>
+        </li>
+        <li><a href="#work" class="link">portfolio</a></li>
+        <li><a href="#blog" class="link">blog</a></li>
+        <li><a href="#contact" class="link">contact</a></li>
+      </ul>
+      <ul class="social">
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://www.facebook.com/profile.php?id=100043788287117"
+            target="_blank"
+          >
+            <svg width="24" height="24">
+              <use href="/src/images/svg/icons.svg#fbf"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://twitter.com/Cristall1989"
+            target="_blank"
+          >
+            <svg width="24" height="24">
+              <use href="/src/images/svg/icons.svg#twittf"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://github.com/Cristal1989"
+            target="_blank"
+          >
+            <svg class="github github__social" height="24px" width="24px">
+              <use href="/src/images/svg/icons.svg#ghf"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            target="_blank"
+            class="social-link"
+            href="https://www.instagram.com/dima_rafal?igsh=eXQzMnA5OGtnanht&utm_source=qr"
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24">
+              <use href="/src/images/svg/icons.svg#instaf"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--//================= Modal window =================//-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close" data-modal-close>
+          <svg class="modal__close--icon">
+            <use href="./images/svg/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <!-- ================ form ============ -->
+        <form class="modal__form" name="registration-form" id="modal-form">
+          <strong class="modal__form--title">Your feedback</strong>
+          <div
+            class="modal__form--details"
+            role="group"
+            area-labelledby="modal-form"
+          >
+            <!-- ================ user ========== -->
+            <div class="modal__form--field">
+              <label for="name" class="modal__form--label">Name</label>
+              <input
+                type="text"
+                name="username"
+                id="name"
+                autocomplete="name"
+                class="modal__form--input"
+                placeholder="Name"
+                required
+                pattern="[a-z]{4,8}"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+            <!-- ============== phone ============== -->
+            <div class="modal__form--field">
+              <label for="tel" class="modal__form--label">Phone</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                autocomplete="on"
+                class="modal__form--input"
+                value="+38 "
+                required
+                pattern="[0-9]{10}"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <!-- ================== mail ================= -->
+            <div class="modal__form--field">
+              <label for="email" class="modal__form--label">Mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                class="modal__form--input"
+                placeholder="username@email.com"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+            <!-- =============== coments =============== -->
+            <div class="modal__form--field">
+              <label for="comment" class="modal__form--label">Comments</label>
+              <textarea
+                name="comment"
+                id="comment"
+                class="form__input--comment"
+                placeholder="Leave your comment"
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit" class="modal__form--btn animated-button">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">Submit</span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</header>

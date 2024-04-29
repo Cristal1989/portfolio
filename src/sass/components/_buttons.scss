@@ -1,0 +1,326 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 25px;
+  font-family: $fontMain;
+
+  color: $accentColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $blueHover;
+    border: 2px solid $blueHover;
+  }
+
+  border: 2px solid $accentColor;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+// ============ animated btn ===================
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 46px;
+  border: 1px solid;
+  border-color: transparent;
+
+  font-family: $fontMain;
+  font-size: 14px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 500;
+  color: $mainColor;
+  box-shadow: 0 0 0 2px $mainColor;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: $accentColor;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 10px;
+  top: 6px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+  top: 6px;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: $accentColor;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: $mainColor;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: $mainColor;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px $accentColor;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+// ============ feedback ===============
+.fancy {
+ background-color: transparent;
+ border: 2px solid $mainColor;
+ border-radius: 0;
+ box-sizing: border-box;
+ color: $whiteColor;
+ cursor: pointer;
+ display: inline-block;
+ float: right;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 1.25em 2em;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+ text-transform: none;
+ transition: all 0.3s ease-in-out;
+ user-select: none;
+ font-size: 13px;
+}
+
+.fancy::before {
+ content: " ";
+ width: 1.5625rem;
+ height: 2px;
+ background: $mainColor;
+ top: 50%;
+ left: 1.5em;
+ position: absolute;
+ transform: translateY(-50%);
+ transform-origin: center;
+ transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text-button {
+ font-size: 1.125em;
+ line-height: 1.33333em;
+ padding-left: 2em;
+ display: block;
+ text-align: left;
+ transition: all 0.3s ease-in-out;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: $mainColor;
+}
+
+.fancy .top-key {
+ height: 2px;
+ width: 1.5625rem;
+ top: -2px;
+ left: 0.625rem;
+ position: absolute;
+ background: $whiteColor;
+ transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+ height: 2px;
+ width: 1.5625rem;
+ right: 1.875rem;
+ bottom: -2px;
+ position: absolute;
+ background: $whiteColor;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+ height: 2px;
+ width: 0.625rem;
+ right: 0.625rem;
+ bottom: -2px;
+ position: absolute;
+ background: $whiteColor;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+ color: $whiteColor;
+ background: $mainColor;
+}
+
+.fancy:hover::before {
+ width: 0.9375rem;
+ background: $whiteColor;
+}
+
+.fancy:hover .text-button {
+ color: $whiteColor;
+ padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+ left: -2px;
+ width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+ right: 0;
+ width: 0;
+}
+
+// ================== burger =================
+
+.menu__btn {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  padding: 0;
+
+  color: $secondaryColor;
+  background-color: transparent;
+  border: none;
+
+  transition: color 250ms;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &:active {
+    color: $accentColor;
+  }
+}
+
+.menu__btn--icon {
+  fill: currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mobile Menu Styles
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  z-index: 500;
+
+  padding: 48px 40px;
+
+  background: #e8e8e8;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  transform: translateX(100%);
+  transition: transform 400ms;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+}
+
+.mobile__nav {
+  margin-bottom: auto;
+
+
+  & li {
+    margin-bottom: 32px;
+  }
+
+  & a {
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 32px;
+
+    color: $secondaryColor;
+
+    &:active {
+      color: $accentColorHover;
+    }
+  }
+}
+.mobile__contacts {
+  margin-bottom: 64px;
+}
